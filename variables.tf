@@ -26,7 +26,7 @@ EOT
     protocol                       = string
     resource_group_name            = string
     floating_ip_enabled            = optional(bool)
-    idle_timeout_in_minutes        = optional(number, 4)
+    idle_timeout_in_minutes        = optional(number) # Default: 4
     tcp_reset_enabled              = optional(bool)
   }))
 }
