@@ -1,3 +1,7 @@
+output "lb_nat_pools_id" {
+  description = "Map of id values across all lb_nat_pools, keyed the same as var.lb_nat_pools"
+  value       = { for k, v in azurerm_lb_nat_pool.lb_nat_pools : k => v.id }
+}
 output "lb_nat_pools_backend_port" {
   description = "Map of backend_port values across all lb_nat_pools, keyed the same as var.lb_nat_pools"
   value       = { for k, v in azurerm_lb_nat_pool.lb_nat_pools : k => v.backend_port }
